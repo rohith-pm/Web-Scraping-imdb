@@ -7,7 +7,7 @@ IMDB search
 <body style="background-color:#f5de50;">
 <form name=myform" method="POST" action="http://127.0.0.1:5000/scrap">
 <h1 style="color:#003366"> Select Genre</h1>
-<select style="background-color:#ffffcc;font-size:22px;"name="genre" id="genre" class="selectpicker form-control">
+<select style="background-color:#ffffcc;font-size:22px;"name="genre" id="genre">
     {% for o in data %}
         <option value="{{ o.gen }}">{{ o.gen }}</option>
     {% endfor %}
