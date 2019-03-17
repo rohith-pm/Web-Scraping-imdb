@@ -7,12 +7,21 @@ IMDB search
 <body style="background-color:#f5de50;">
 <form name=myform" method="POST" action="http://127.0.0.1:5000/scrap">
 <h1 style="color:#003366"> Select Genre</h1>
-<select style="background-color:#ffffcc;font-size:22px;"name="genre" id="genre">
+<select style="background-color:#ffffcc;font-size:22px;"name="genre" id="genre" >
     {% for o in data %}
         <option value="{{ o.gen }}">{{ o.gen }}</option>
     {% endfor %}
 </select>
-<br><br><br>
+<br>
+<h1 style="color:#003366"> Select Language</h1>
+
+<select style="background-color:#ffffcc;font-size:22px;"name="language" id="language" >
+    {% for o in language %}
+        <option value="{{ o.lang }}">{{ o.lang }}</option>
+    {% endfor %}
+</select>
+
+
 <input type="submit" value="Show results" style="font-size:20px;">
 <center>
 
